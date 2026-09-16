@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penelusuran Google - Jawabanku Untukmu</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Mengambil font Roboto dari Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Musik Latar (Akan otomatis diputar jika browser mengizinkan) -->
+    <audio id="bg-music" loop>
+        <source src="lagu.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Bagian Header (Atas) -->
+    <header class="header">
+        <div class="header-top">
+            <!-- Ganti dengan teks atau biarkan menggunakan logo teks -->
+            <div class="logo"><span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span></div>
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" value="Kenapa aku sangat mencintaimu?" readonly>
+                <span class="mic-icon">🎤</span>
+            </div>
+            <div class="profile-icon">❤️</div>
+        </div>
+        
+        <!-- Tab Navigasi -->
+        <nav class="tabs">
+            <button class="tab-btn active" onclick="showTab('all')">🔍 Semua</button>
+            <button class="tab-btn" onclick="showTab('images')">🖼️ Gambar</button>
+            <button class="tab-btn" onclick="showTab('letter')">✉️ Surat</button>
+        </nav>
+    </header>
+
+    <p class="result-count">Sekitar 1.000.000.000 hasil (0,01 detik)</p>
+
+    <!-- Wadah Utama -->
+    <div class="container">
+        <!-- Konten Kiri (Hasil Pencarian) -->
+        <main class="main-content">
+            
+            <!-- BAGIAN 1: SEMUA (AI Overview) -->
+            <div id="tab-all" class="tab-content active-content">
+                <div class="ai-overview">
+                    <div class="ai-header">
+                        <span class="ai-sparkle">✨ AI Overview</span>
+                    </div>
+                    <h3>Analisis Hubungan: Sistem Berjalan Normal</h3>
+                    <p>Berdasarkan seluruh data yang pernah dikumpulkan, kamu bukan sekadar bagian dari hidupku. Kamu adalah satu-satunya variabel yang selalu berhasil membuat sistemku berjalan sebagaimana mestinya.</p>
+                    <ul>
+                        <li><b>Permanent Favorite:</b> Dari sekian banyak orang, cuma kamu yang menetap di hatiku.</li>
+                        <li><b>Emotional Support:</b> Banyak hal terasa lebih ringan karena ada kamu.</li>
+                        <li><b>No Uninstall Option:</b> Sistem sudah mencoba mencari opsi untuk berhenti mencintaimu. <b>Error: opsi tidak ditemukan.</b></li>
+                    </ul>
+                </div>
+
+                <div class="search-result">
+                    <a href="#" class="result-link">https://jawabanku-untukmu.com</a>
+                    <h3 class="result-title">Hasil Resmi: Untuk Kesayanganku</h3>
+                    <p class="result-desc">Setelah melakukan penelitian panjang, mengumpulkan seluruh bukti, kenangan, dan tawa kita... hasil akhirnya tetap sama: <b>Aku sayang kamu.</b></p>
+                </div>
+            </div>
+
+            <!-- BAGIAN 2: GAMBAR (Galeri Foto) -->
+            <div id="tab-images" class="tab-content">
+                <h3 class="section-title">Memori Kita</h3>
+                <div class="photo-grid">
+                    <!-- Ganti nama file pop-1.jpg dst dengan nama file fotomu -->
+                    <img src="pop-1.jpg" alt="Foto Kita 1">
+                    <img src="pop-2.jpg" alt="Foto Kita 2">
+                    <img src="pop-3.jpg" alt="Foto Kita 3">
+                    <img src="pop-4.jpg" alt="Foto Kita 4">
+                </div>
+            </div>
+
+            <!-- BAGIAN 3: SURAT (Pesan Panjang) -->
+            <div id="tab-letter" class="tab-content">
+                <div class="letter-box">
+                    <h2>Untuk orang kesayanganku,</h2>
+                    <p>Mungkin tulisan ini nggak seberapa, tapi ini adalah caraku mengabadikan hal-hal kecil tentang kita.</p>
+                    <p>Terima kasih sudah sabar dengan segala kekuranganku. Terima kasih karena tetap menjadi tempat yang terasa hangat bahkan ketika hari-hariku sedang tidak baik-baik saja.</p>
+                    <p>Semoga langkahmu selalu dipertemukan dengan hal-hal baik, dan semoga kamu tidak pernah merasa sendirian dalam mengejar semua yang kamu impikan.</p>
+                    <p>Kalau kamu bertanya apakah perasaanku masih sama, jawabannya: <b>Iya. Akan selalu kamu.</b></p>
+                    <br>
+                    <p>Your Favorite Person,<br><b>[Tulis Namamu di Sini]</b></p>
+                </div>
+            </div>
+            
+            <!-- Tombol Putar Musik (Kecil di bawah) -->
+            <button id="music-btn" onclick="playMusic()">▶️ Putar Musik Latar</button>
+
+        </main>
+
+        <!-- Konten Kanan (Knowledge Panel) -->
+        <aside class="sidebar">
+            <div class="knowledge-panel">
+                <div class="kp-images">
+                    <!-- Ganti dengan foto terbaik berdua -->
+                    <img src="pop-main.jpg" alt="Pasangan" class="kp-main-img">
+                </div>
+                <div class="kp-header">
+                    <h2>The Perfect Pair ❤️</h2>
+                    <p>Informasi Hubungan Esensial</p>
+                </div>
+                <div class="kp-content">
+                    <p><b>Didirikan:</b> Hari pertama kita bertemu</p>
+                    <p><b>Markas Utama:</b> Hati satu sama lain</p>
+                    <p><b>Status:</b> Sangat jatuh cinta</p>
+                    <p><b>Masa Depan:</b> Tetap kamu. Selalu kamu.</p>
+                    <hr>
+                    <p class="kp-note">Catatan: Kamu adalah satu-satunya orang yang bisa membuatku tersenyum tanpa alasan sama sekali.</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Script untuk menjalankan Tab dan Musik -->
+    <script>
+        // Fungsi untuk mengganti Tab
+        function showTab(tabName) {
+            // Sembunyikan semua konten tab
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active-content');
+            });
+            // Hapus garis bawah dari semua tombol
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Tampilkan tab yang dipilih
+            document.getElementById('tab-' + tabName).classList.add('active-content');
+            event.currentTarget.classList.add('active');
+        }
+
+        // Fungsi untuk memutar musik
+        function playMusic() {
+            var audio = document.getElementById("bg-music");
+            var btn = document.getElementById("music-btn");
+            if (audio.paused) {
+                audio.play();
+                btn.innerHTML = "⏸️ Jeda Musik";
+            } else {
+                audio.pause();
+                btn.innerHTML = "▶️ Putar Musik Latar";
+            }
+        }
+    </script>
+</body>
+  </html>
